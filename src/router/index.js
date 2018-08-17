@@ -5,11 +5,13 @@ import Home from '@/components/AppHome'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    }
-  ]
+  routes: [{
+    path: '/',
+    name: 'Home',
+    component: Home
+  }, {
+    path: '/:repo/',
+    component: require('../components/RepoHome.vue'),
+    props: true,
+  }]
 })

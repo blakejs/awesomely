@@ -31,8 +31,8 @@
 			<v-spacer></v-spacer>
 			<v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 		</v-toolbar>
-		<v-content :repo="repos">
-			<router-view/>
+		<v-content>
+			<router-view :repos="repos" />
 		</v-content>
 		<v-footer app>
 			<span class="pa-2">BlakeJS &copy; 2018</span>
@@ -50,13 +50,8 @@
 			repos: '',
 		}),
 		methods: {
-			select() {
-				let subitemsurl = this.subitems.url;
-				window.open = subitemsurl;
-				console.log(subitemsurl)
-			},
 			passRepo(repo) {
-				this.repos = 'https://rawgit.com/' + repo + '/master/readme.md'
+				this.repos = 'https://rawgit.com/' + repo + '/master/README.md'
 			}
 		}
 	}

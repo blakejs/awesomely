@@ -43,13 +43,13 @@
 			html: true,
 			readme: '',
 		}),
-		props: ['repo'],
+		props: ['repos'],
 		components: {
 			VueMarkdown
 		},
 		methods: {
 			getReadme() {
-				fetch(repo)
+				fetch(this.repos)
 					.then(response => {
 						return response.text()
 					})
