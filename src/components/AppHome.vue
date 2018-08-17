@@ -12,7 +12,7 @@
 					</v-card-title>
 
 					<v-card-actions>
-						<v-btn flat @click="getReadme">Share</v-btn>
+						<v-btn flat>Share</v-btn>
 						<v-btn flat>Explore</v-btn>
 						<v-spacer></v-spacer>
 						<v-btn icon @click="show = !show">
@@ -47,7 +47,7 @@
 		components: {
 			VueMarkdown
 		},
-		methods: {
+		computed: {
 			getReadme() {
 				fetch(this.repos)
 					.then(response => {
@@ -60,6 +60,13 @@
 						console.log(error)
 					}
 			}
+		},
+		watch: {
+			repos: function(val, oldval) {
+				this.show = true;
+				this.getReadme();
+			},
+			deep: true
 		}
 	}
 </script>
