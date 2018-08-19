@@ -2,7 +2,7 @@
 	<v-container fluid class="px-3">
 		<v-layout justify-center align-center row>
 			<v-flex md9>
-				<v-card>
+				<v-card style="max-width: 100%;max-height: 100%;overflow: auto">
 					<v-card-media src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="100px" />
 					<v-card-title primary-title>
 						<div>
@@ -22,6 +22,7 @@
 
 					<v-slide-y-transition>
 						<v-card-text v-show="show">
+							<v-progress-linear :indeterminate="true" color="primary" v-if="loading"></v-progress-linear>
 							<vue-markdown :html="true" :source="readme"></vue-markdown>
 						</v-card-text>
 					</v-slide-y-transition>
@@ -49,12 +50,15 @@
 		},
 		computed: {
 			getReadme() {
+				this.readme = '';
+				this.loading = true;
 				fetch(this.repos)
 					.then(response => {
 						return response.text()
 					})
 					.then(data => {
-						this.readme = data
+						this.readme = data;
+						this.loading = false
 					}),
 					error => {
 						console.log(error)
@@ -62,7 +66,7 @@
 			}
 		},
 		watch: {
-			repos: function(val, oldval) {
+			repos(val, oldval) {
 				this.show = true;
 				this.getReadme();
 			},
