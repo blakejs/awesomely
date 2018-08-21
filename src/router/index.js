@@ -11,7 +11,7 @@ export default new Router({
     component: Home
   }, {
     path: '/:repo/',
-    component: require('../components/RepoHome.vue'),
+    component: require('../components/Repo.vue'),
     props: true,
   }]
 })
