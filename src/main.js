@@ -4,8 +4,8 @@ import App from './App'
 import router from './router'
 
 // CUSTOM //
-import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import Vuetify from 'vuetify'
 import VueMarkdown from 'vue-markdown'
 
 Vue.use(Vuetify)
@@ -16,8 +16,10 @@ Vue.config.productionTip = false
 
 // CREATE MAIN VUE INSTANCE //
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: {
+        App,
+    },
+    template: '<App/>',
 })
