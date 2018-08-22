@@ -3,7 +3,6 @@
 		<v-layout justify-center align-center row>
 			<v-flex md9>
 				<v-card style="max-width: 100%;max-height: 100%;overflow: auto">
-					<v-card-media src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="100px" />
 					<v-card-title primary-title>
 						<div>
 							<div class="headline">Making your resources more convenient</div>
@@ -12,8 +11,8 @@
 					</v-card-title>
 
 					<v-card-actions>
+						<v-btn flat>Get Started</v-btn>
 						<v-btn flat>Share</v-btn>
-						<v-btn flat>Explore</v-btn>
 						<v-spacer></v-spacer>
 						<v-btn icon @click="show = !show">
 							<v-icon>{{ show ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
@@ -41,6 +40,7 @@
 		data: () => ({
 			AwesomeData,
 			show: false,
+			loading: false,
 			html: true,
 			readme: '',
 		}),
