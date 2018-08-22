@@ -59,7 +59,7 @@
 					.then(data => {
 						this.readme = data;
 						this.loading = false
-					}),
+					})
 					error => {
 						console.log(error)
 					}

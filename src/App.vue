@@ -57,7 +57,7 @@
                 fetch('https://api.github.com/repos/' + repo + '/readme')
                     .then(response => response.json())
                     .then(data => {
-                        this.repos = data.download_url // Prints result from `response.json()` in getRequest
+                        this.repos = data.download_url // sets repos prop to raw markdown link
                     })
                     .catch(error => console.error(error))
             }
