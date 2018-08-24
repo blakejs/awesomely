@@ -22,7 +22,7 @@
                     <v-slide-y-transition>
                         <v-card-text v-show="show">
                             <v-progress-linear :indeterminate="true" color="primary" v-if="loading"></v-progress-linear>
-                            <vue-markdown :html="true" :source="readme"></vue-markdown>
+                            <vue-markdown :html="true" :source="readme" :toc="true"></vue-markdown>
                         </v-card-text>
                     </v-slide-y-transition>
                 </v-card>
@@ -33,46 +33,56 @@
 </template>
 
 <script>
-	import VueMarkdown from 'vue-markdown'
-	import AwesomeData from '../../static/awesome.json'
+    import VueMarkdown from 'vue-markdown'
+    import AwesomeData from '../../static/awesome.json'
 
-	export default {
-		data: () => ({
-			AwesomeData,
-			show: false,
-			loading: false,
-			html: true,
-			readme: '',
-		}),
-		props: ['repos'],
-		components: {
-			VueMarkdown
-		},
-		methods: {
-			getReadme() {
-				this.readme = '';
-				this.loading = true;
-				fetch(this.repos)
-					.then(response => {
-						return response.text()
-					})
-					.then(data => {
-						this.readme = data;
-						this.loading = false
-					})
-					error => {
-						console.log(error)
-					}
-			}
-		},
-		watch: {
-			repos(val, oldval) {
-				this.show = true;
-				this.getReadme();
-			},
-			deep: true
-		}
-	}
+    export default {
+        data: () => ({
+            AwesomeData,
+            show: false,
+            loading: false,
+            html: true,
+            readme: '',
+            brokeImg: ''
+        }),
+        props: ['repos'],
+        components: {
+            VueMarkdown
+        },
+        methods: {
+            getReadme() {
+                this.readme = '';
+                this.loading = true;
+                fetch(this.repos)
+                    .then(response => {
+                        return response.text()
+                    })
+                    .then(data => {
+                        this.readme = data;
+                        this.loading = false
+                    })
+                error => {
+                    console.log(error)
+                }
+            },
+            removeBrokeImage() {
+                Array.from(document.getElementsByTagName('img'))
+                .forEach(element => {
+                    element.addEventListener('onerror', (element) => {
+                        element.remove();
+                    })
+                });
+            }
+        },
+        watch: {
+            repos(val, oldval) {
+                this.show = true;
+                this.getReadme();
+            },
+            deep: true
+        }
+    }
+
 </script>
 
 <style>

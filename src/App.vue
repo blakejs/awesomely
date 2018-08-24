@@ -51,9 +51,6 @@
         }),
         methods: {
             passRepo(repo) {
-                let repoSplit = repo.split('/');
-                let maintainer = repoSplit[0];
-                let repoName = repoSplit[1];
                 fetch('https://api.github.com/repos/' + repo + '/readme')
                     .then(response => response.json())
                     .then(data => {
