@@ -14,13 +14,9 @@
                         </v-list-tile-content>
                     </v-list-tile>
                     <v-list v-for="subitems in AwesomeData[subject]" :key="subitems.name" dense>
-                        <v-list-tile @click="passRepo(subitems.repo)">
+                        <v-list-tile @click="passRepo(subitems.repo); drawer = false">
                             <v-icon>subdirectory_arrow_right</v-icon>
                             <v-list-tile-action>{{ subitems.name }}</v-list-tile-action>
-                            <v-spacer></v-spacer>
-                            <v-btn round small icon color="grey" @click="router.push('/e')">
-                                <v-icon style="color:white">star</v-icon>
-                            </v-btn>
                         </v-list-tile>
                     </v-list>
                 </v-list-group>
@@ -52,11 +48,13 @@
         methods: {
             passRepo(repo) {
                 fetch('https://api.github.com/repos/' + repo + '/readme')
-                    .then(response => response.json())
-                    .then(data => {
-                        this.repos = data.download_url // sets repos prop to raw markdown link
+                    .then(response => {
+                        return response.json()
                     })
-                    .catch(error => console.error(error))
+                    .then(data => {
+                        this.repos = data.download_url
+                    })
+                    .catch(e => console.error(e))
             }
         }
     }

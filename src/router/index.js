@@ -5,13 +5,10 @@ import Home from '@/components/AppHome'
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
-    path: '/',
-    name: 'Home',
-    component: Home
-  }, {
-    path: '/:repo/',
-    component: require('../components/Repo.vue'),
-    props: true,
-  }]
+    // prettier-ignore
+    routes: [{
+        path: '/',
+        name: 'Home',
+        component: Home,
+    }, ]
 })
