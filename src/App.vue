@@ -37,27 +37,27 @@
 </template>
 
 <script>
-    import AwesomeData from '../static/awesome.json'
+import AwesomeData from '../static/awesome.json';
 
-    export default {
-        data: () => ({
-            AwesomeData,
-            drawer: null,
-            repos: '',
-        }),
-        methods: {
-            passRepo(repo) {
-                fetch('https://api.github.com/repos/' + repo + '/readme')
-                    .then(response => {
-                        return response.json()
-                    })
-                    .then(data => {
-                        this.repos = data.download_url
-                    })
-                    .catch(e => console.error(e))
-            }
-        }
-    }
+export default {
+    data: () => ({
+        AwesomeData,
+        drawer: null,
+        repos: '',
+    }),
+    methods: {
+        passRepo(repo) {
+            fetch('https://api.github.com/repos/' + repo + '/readme')
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    this.repos = data.download_url;
+                })
+                .catch(e => console.error(e));
+        },
+    },
+};
 </script>
 
 <style>

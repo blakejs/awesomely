@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from '@/components/AppHome'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from '@/components/AppHome';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
     // prettier-ignore
@@ -11,4 +11,4 @@ export default new Router({
         name: 'Home',
         component: Home,
     }, ]
-})
+});

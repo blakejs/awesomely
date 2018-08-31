@@ -51,51 +51,50 @@
 </template>
 
 <script>
-    import VueMarkdown from 'vue-markdown'
+import VueMarkdown from 'vue-markdown';
 
-    export default {
-        data: () => ({
-            show: false,
-            loading: false,
-            html: true,
-            readme: '',
-        }),
-        props: ['repos'],
-        components: {
-            VueMarkdown
+export default {
+    data: () => ({
+        show: false,
+        loading: false,
+        html: true,
+        readme: '',
+    }),
+    props: ['repos'],
+    components: {
+        VueMarkdown,
+    },
+    methods: {
+        getReadme() {
+            this.loading = true;
+            fetch(this.repos)
+                .then(response => {
+                    return response.text();
+                })
+                .then(data => {
+                    this.readme = data;
+                    this.loading = false;
+                })
+                .catch(e => console.error(e));
         },
-        methods: {
-            getReadme() {
-                this.loading = true;
-                fetch(this.repos)
-                    .then(response => {
-                        return response.text()
-                    })
-                    .then(data => {
-                        this.readme = data;
-                        this.loading = false;
-                    })
-                    .catch(e => console.error(e))
-            },
-            fixBrokenImages() {
-                document.addEventListener("DOMContentLoaded", function (event) {
-                    document.querySelectorAll('img').forEach(function (img) {
-                        img.onerror = function () {
-                this.style.display = 'none';
-            };
-        })
-    });
-            }
+        fixBrokenImages() {
+            document.addEventListener('DOMContentLoaded', function(event) {
+                document.querySelectorAll('img').forEach(function(img) {
+                    img.onerror = function() {
+                        this.style.display = 'none';
+                    };
+                });
+            });
         },
-        watch: {
-            repos(val, oldval) {
-                this.show = true;
-                this.getReadme();
-            },
-            deep: true
-        }
-    }
-
+    },
+    watch: {
+        repos(val, oldval) {
+            this.show = true;
+            this.getReadme();
+        },
+        deep: true,
+    },
+};
 </script>
 
 <style>

@@ -1,25 +1,20 @@
-// MAIN IMPORTS //
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+// MAIN //
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
 
-// CUSTOM //
-import 'vuetify/dist/vuetify.min.css'
-import Vuetify from 'vuetify'
-import VueMarkdown from 'vue-markdown'
-
-Vue.use(Vuetify)
-Vue.use(VueMarkdown)
+// PLUGINS //
+import './plugins/markdown';
+import './plugins/vuetify';
 
 // CONFIGS //
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 // CREATE MAIN VUE INSTANCE //
+/*eslint-disable */
 new Vue({
-    el: '#app',
     router,
-    components: {
-        App,
-    },
-    template: '<App/>',
-})
+    store,
+    render: h => h(App)
+}).$mount('#app')
