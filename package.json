@@ -74,6 +74,7 @@
             "node": true
         },
         "extends": [
+            "prettier",
             "plugin:vue/essential",
             "eslint:recommended"
         ],
@@ -84,6 +85,8 @@
     },
     "postcss": {
         "plugins": {
+            "postcss-import": {},
+            "postcss-url": {},
             "autoprefixer": {}
         }
     },
