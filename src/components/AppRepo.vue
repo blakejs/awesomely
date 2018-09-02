@@ -1,5 +1,5 @@
 <template>
-    <v-card>
+    <v-card class="main" v-if="GithubRepoLink">
         <v-card-title primary-title>
             <div>
                 <div class="headline">REPO TITLE</div>
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style scoped>
-v-card {
+.main {
     max-width: 100%;
     max-height: 100%;
     overflow: auto;

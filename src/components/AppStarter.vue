@@ -6,7 +6,7 @@
                 <v-icon>close</v-icon>
             </v-btn>
         </v-card-actions>
-        <v-card-media class="grey" height="200px">
+        <v-card-media class="grey" height="50px">
         </v-card-media>
         <v-card-title primary-title>
             <div>
