@@ -28,7 +28,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         clientLogLevel: 'warning',
         disableHostCheck: true,
         allowedHosts: [
-            '.amazonaws.com'
+            '0.0.0.0'
         ],
         historyApiFallback: {
             rewrites: [{
