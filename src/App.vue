@@ -49,6 +49,7 @@ export default {
                     return response.json();
                 })
                 .then(data => {
+                    console.log(data);
                     this.$store.commit('SET_REPOLINK', data.download_url);
                 })
                 .catch(e => console.error(e));

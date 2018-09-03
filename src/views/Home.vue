@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="px-3">
         <v-layout justify-center align-center row>
-            <v-flex md9>
+            <v-flex md11>
                 <app-starter></app-starter>
                 <app-repo></app-repo>
             </v-flex>

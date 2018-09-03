@@ -1,16 +1,15 @@
 <template>
     <v-card class="main" v-if="GithubRepoLink">
-        <v-card-title primary-title>
+        <v-toolbar extended>
             <div>
-                <div class="headline">REPO TITLE</div>
+                <div class="headline">REPO TITLEREPO TITLEREPO TITLEREPO TITLE</div>
                 <span class="grey--text">REPO DESC</span>
             </div>
             <v-spacer></v-spacer>
             <v-btn round small icon color="grey">
                 <v-icon style="color:white">star</v-icon>
             </v-btn>
-        </v-card-title>
-
+        </v-toolbar>
         <v-card-actions>
             <v-btn flat>Visit GitHub</v-btn>
             <v-btn flat>Share</v-btn>
@@ -26,6 +25,7 @@
                 <vue-markdown :html="true" :source="readme" :toc="true" v-else></vue-markdown>
             </v-card-text>
         </v-slide-y-transition>
+
     </v-card>
 </template>
 
@@ -70,7 +70,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .main {
     max-width: 100%;
     max-height: 100%;
@@ -79,6 +79,8 @@ export default {
 
 img {
     position: relative;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 img:after {

@@ -19,7 +19,11 @@
             </div>
         </v-card-title>
         <v-card-text>
-            hello
+            <h2>Features</h2>
+            <ul>
+                <li>Easily save your favorite Awesome Lists for later use.</li>
+                <li>Share </li>
+            </ul>
         </v-card-text>
         <v-card-actions>
             <v-btn flat color="primary">hello</v-btn>
