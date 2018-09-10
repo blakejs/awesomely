@@ -11,6 +11,8 @@ export const store = new Vuex.Store({
         AwesomeData,
         AwesomeDataSubjects,
         GithubRepoLink: '',
+        GithubRepoName: '',
+        GithubRepoURL: '',
     },
     getters: {
         REPOLINK: state => {
@@ -20,6 +22,12 @@ export const store = new Vuex.Store({
     mutations: {
         SET_REPOLINK: (state, payload) => {
             state.GithubRepoLink = payload
+        },
+        SET_REPONAME: (state, payload) => {
+            state.GithubRepoName = payload
+        },
+        SET_REPOURL: (state, payload) => {
+            state.GithubRepoURL = payload
         }
     },
     actions: {},

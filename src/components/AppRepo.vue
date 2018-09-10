@@ -3,7 +3,7 @@
 
         <v-toolbar extended>
             <div>
-                <div class="headline">REPO TITLE</div>
+                <div class="headline"> {{ this.GithubRepoName }} </div>
                 <span class="grey--text">REPO DESC</span>
             </div>
             <v-spacer></v-spacer>
@@ -66,7 +66,7 @@ export default {
         deep: true,
     },
     computed: {
-        ...mapState(['GithubRepoLink']),
+        ...mapState(['GithubRepoLink', 'GithubRepoName', 'GithubRepoURL']),
     },
 };
 </script>
