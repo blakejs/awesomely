@@ -1,8 +1,9 @@
 <template>
     <v-card class="main" v-if="GithubRepoLink">
+
         <v-toolbar extended>
             <div>
-                <div class="headline">REPO TITLEREPO TITLEREPO TITLEREPO TITLE</div>
+                <div class="headline">REPO TITLE</div>
                 <span class="grey--text">REPO DESC</span>
             </div>
             <v-spacer></v-spacer>

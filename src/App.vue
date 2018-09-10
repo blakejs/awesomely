@@ -14,7 +14,7 @@
                         </v-list-tile-content>
                     </v-list-tile>
                     <v-list v-for="items in AwesomeData[subject]" :key="items.name" dense>
-                        <v-list-tile @click="passRepo(items.repo)">
+                        <v-list-tile @click="passRepo(items.repo, items.name, items.url)">
                             <v-icon>subdirectory_arrow_right</v-icon>
                             <v-list-tile-action>{{ items.name }}</v-list-tile-action>
                         </v-list-tile>
@@ -43,7 +43,7 @@ export default {
         repo: '',
     }),
     methods: {
-        passRepo(repo) {
+        passRepo(repo, name, url) {
             fetch('https://api.github.com/repos/' + repo + '/readme')
                 .then(response => {
                     return response.json();
