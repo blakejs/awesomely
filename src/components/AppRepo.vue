@@ -1,16 +1,14 @@
 <template>
     <v-card class="main" v-if="GithubRepoLink">
-
-        <v-toolbar extended>
+        <v-card-title primary-title>
             <div>
-                <div class="headline"> {{ this.GithubRepoName }} </div>
-                <span class="grey--text">REPO DESC</span>
+                <h3 class="headline mb-0">{{ this.GithubRepoName }}</h3>
             </div>
-            <v-spacer></v-spacer>
-            <v-btn round small icon color="grey">
-                <v-icon style="color:white">star</v-icon>
-            </v-btn>
-        </v-toolbar>
+        </v-card-title>
+        <v-spacer></v-spacer>
+        <v-btn round small icon color="grey">
+            <v-icon style="color:white">star</v-icon>
+        </v-btn>
         <v-card-actions>
             <v-btn flat>Visit GitHub</v-btn>
             <v-btn flat>Share</v-btn>
@@ -19,14 +17,12 @@
                 <v-icon>{{ show ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
             </v-btn>
         </v-card-actions>
-
         <v-slide-y-transition>
             <v-card-text v-show="show">
                 <v-progress-linear :indeterminate="true" color="primary" v-if="loading"></v-progress-linear>
                 <vue-markdown :html="true" :source="readme" :toc="true" v-else></vue-markdown>
             </v-card-text>
         </v-slide-y-transition>
-
     </v-card>
 </template>
 
@@ -39,7 +35,6 @@ export default {
         show: false,
         loading: false,
         readme: '',
-        repoLink: '',
     }),
     components: {
         VueMarkdown,
@@ -55,7 +50,7 @@ export default {
                     this.readme = data;
                     this.loading = false;
                 })
-                .catch(e => console.error(e));
+                .catch(error => console.error(error));
         },
     },
     watch: {
