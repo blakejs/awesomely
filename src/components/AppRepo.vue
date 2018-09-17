@@ -1,22 +1,23 @@
 <template>
     <v-card class="main" v-if="GithubRepoLink">
         <v-card-title primary-title>
+            <v-btn round small icon color="grey">
+                <v-icon style="color:white">star</v-icon>
+            </v-btn>
             <div>
                 <h3 class="headline mb-0">{{ this.GithubRepoName }}</h3>
             </div>
         </v-card-title>
-        <v-spacer></v-spacer>
-        <v-btn round small icon color="grey">
-            <v-icon style="color:white">star</v-icon>
-        </v-btn>
         <v-card-actions>
-            <v-btn flat>Visit GitHub</v-btn>
+
+            <v-btn flat :href="GithubRepoURL">Visit GitHub</v-btn>
             <v-btn flat>Share</v-btn>
             <v-spacer></v-spacer>
             <v-btn icon @click="show = !show">
                 <v-icon>{{ show ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
             </v-btn>
         </v-card-actions>
+        <v-divider></v-divider>
         <v-slide-y-transition>
             <v-card-text v-show="show">
                 <v-progress-linear :indeterminate="true" color="primary" v-if="loading"></v-progress-linear>
