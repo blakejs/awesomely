@@ -6,16 +6,17 @@
         <v-card-title primary-title>
             <div>
                 <h3 class="headline mb-0">Welcome to Awesomely</h3>
-                <div>A Dashboard for organizing and quickly accessing Awesome Github Lists.</div>
+                <h4>A Dashboard for making your Awesome GitHub Resources accessible and organized.</h4>
+                <br />
                 <iframe src="https://ghbtns.com/github-btn.html?user=blakejs&repo=Awesomely&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-                <p>
-                    <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome badge." />
-                </p>
+                <br />
+                <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome badge." />
             </div>
         </v-card-title>
+        <v-divider></v-divider>
         <v-card-text>
             <h2>Why?</h2>
-            <span>Awesomely was made to make the resources contained in the github readme files of a category of projects called "Awesome List" (sometimes called Awesomes) more accessible.</span>
+            <p>Awesomely was made to make the resources contained in the github readme files of a category of projects called "Awesome List" (sometimes called Awesomes) more accessible.</p>
             <h2>What?</h2>
             <ul>
                 <li>Easily save your favorite Awesome Lists for later use.</li>
