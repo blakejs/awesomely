@@ -1,18 +1,11 @@
 <template>
     <v-card class="mb-3" v-if="!GithubRepoLink">
-        <div style="display:grid">
-            <img src="../assets/awesome.svg" alt="awesome" style="align-self:center;justify-self:center">
+        <div style="display:grid" class="pt-3">
+            <img src="../assets/awesomely.png" alt="awesome" style="align-self:center;justify-self:center">
         </div>
-        <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0">Welcome to Awesomely</h3>
-                <h4>A Dashboard for making your Awesome GitHub Resources accessible and organized.</h4>
-                <br />
-                <iframe src="https://ghbtns.com/github-btn.html?user=blakejs&repo=Awesomely&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-                <br />
-                <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome badge." />
-            </div>
-        </v-card-title>
+        <div class="text-xs-center pb-3">
+            <h4>A Dashboard for making your Awesome GitHub Resources accessible and organized.</h4>
+        </div>
         <v-divider></v-divider>
         <v-card-text>
             <h2>Why?</h2>

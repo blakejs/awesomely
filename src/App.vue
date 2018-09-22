@@ -23,7 +23,7 @@
             </v-list>
         </v-navigation-drawer>
         <v-toolbar app dense>
-            <v-toolbar-title class="toolbar-title">Awesomely</v-toolbar-title>
+            <v-toolbar-title class="toolbar-title">awesomely</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
