@@ -1,11 +1,12 @@
 <template>
     <v-app>
         <v-navigation-drawer v-model="drawer" fixed right app>
-            <v-subheader style="margin-bottom:-40px">SEARCH AWESOMES</v-subheader>
-            <v-text-field prepend-icon="search" single-line class="pa-3" style="margin-bottom:-20px"></v-text-field>
-            <v-divider></v-divider>
+            <v-toolbar dense color="white">
+                <v-text-field label="Search awesomely" prepend-icon="search" single-line style="margin-bottom:-15px;margin-left:-10px"></v-text-field>
+            </v-toolbar>
+
             <v-list dense>
-                <v-subheader>CHOOSE AWESOMES</v-subheader>
+                <v-subheader style="text-decoration:underline">Awesomes</v-subheader>
                 <v-list-group v-for="subject in Object.keys(AwesomeData)" :key="subject">
                     <v-list-tile slot="activator">
                         <v-icon class="pr-1">home</v-icon>
@@ -23,15 +24,18 @@
             </v-list>
         </v-navigation-drawer>
         <v-toolbar app dense>
-            <v-toolbar-title class="toolbar-title">awesomely</v-toolbar-title>
+            <v-toolbar-title class="font-weight-bolder">awesomely</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
-        <v-content class="content">
+        <v-content class="content mb-4">
             <router-view />
         </v-content>
-        <v-footer app>
-            <span class="pa-2">BlakeJS &copy; 2018</span>
+        <v-footer absolute class="text-xs-center justify-center">
+            <span>
+                Made with ❤ by
+                <a href="http://blakejs.com">BlakeJS</a>
+            </span>
         </v-footer>
     </v-app>
 </template>
@@ -67,8 +71,5 @@ export default {
 <style scoped>
 .content {
     background-color: #fc60a850;
-}
-.toolbar-title {
-    font-weight: bold;
 }
 </style>
