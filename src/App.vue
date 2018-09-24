@@ -2,11 +2,10 @@
     <v-app>
         <v-navigation-drawer v-model="drawer" fixed right app>
             <v-toolbar dense color="white">
-                <v-text-field label="Search awesomely" prepend-icon="search" single-line style="margin-bottom:-15px;margin-left:-10px"></v-text-field>
+                <v-autocomplete v-model="model" :search-input.sync="search" :items="names" color="white" item-text="name" placeholder="Search awesomely" append-icon="search" hide-selected return-object />
             </v-toolbar>
-
-            <v-list dense>
-                <v-subheader style="text-decoration:underline">Awesomes</v-subheader>
+            <v-list dense class="mb-5">
+                <v-subheader>Awesomes</v-subheader>
                 <v-list-group v-for="subject in Object.keys(AwesomeData)" :key="subject">
                     <v-list-tile slot="activator">
                         <v-icon class="pr-1">home</v-icon>
@@ -28,7 +27,7 @@
             <v-spacer></v-spacer>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
-        <v-content class="content mb-4">
+        <v-content class="mb-4">
             <router-view />
         </v-content>
         <v-footer absolute class="text-xs-center justify-center">
@@ -42,11 +41,21 @@
 
 <script>
 import { mapState } from 'vuex';
+import AwesomeData from '../static/awesome.json';
 
+let nameAwesome = () => {
+    let entries = Object.entries(AwesomeData);
+    let names = entries.map(name => name[1]).flat();
+    return names;
+};
+
+console.log(nameAwesome());
 export default {
     data: () => ({
         drawer: null,
-        repo: '',
+        names: nameAwesome(),
+        search: null,
+        model: null,
     }),
     methods: {
         passRepo(name, url, repo) {
@@ -65,11 +74,25 @@ export default {
     computed: {
         ...mapState(['AwesomeData']),
     },
+    watch: {
+        model(val) {
+            if (this.model) {
+                this.passRepo(this.model.name, this.model.url, this.model.repo);
+            }
+        },
+    },
 };
 </script>
 
 <style scoped>
-.content {
+.v-content {
     background-color: #fc60a850;
+}
+.v-autocomplete {
+    margin-bottom: -15px;
+    margin-left: -10px;
+}
+.v-subheader {
+    text-decoration: underline;
 }
 </style>

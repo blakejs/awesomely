@@ -49,9 +49,9 @@ export default {
                 })
                 .then(data => {
                     this.readme = data;
-                    this.loading = false;
                 })
-                .catch(error => console.error(error));
+                .catch(error => console.error(error))
+                .finally(() => (this.loading = false));
         },
     },
     watch: {
