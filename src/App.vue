@@ -23,7 +23,9 @@
             </v-list>
         </v-navigation-drawer>
         <v-toolbar app dense>
-            <v-toolbar-title class="font-weight-bolder">awesomely</v-toolbar-title>
+            <button class="home" @click="setHome">
+                <v-toolbar-title class="font-weight-bolder">awesomely</v-toolbar-title>
+            </button>
             <v-spacer></v-spacer>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
@@ -49,7 +51,6 @@ let nameAwesome = () => {
     return names;
 };
 
-console.log(nameAwesome());
 export default {
     data: () => ({
         drawer: null,
@@ -61,6 +62,7 @@ export default {
         passRepo(name, url, repo) {
             this.$store.commit('SET_REPONAME', name);
             this.$store.commit('SET_REPOURL', url);
+            this.$store.commit('SET_REPO', repo);
             fetch('https://api.github.com/repos/' + repo + '/readme')
                 .then(response => {
                     return response.json();
@@ -69,6 +71,9 @@ export default {
                     this.$store.commit('SET_REPOLINK', data.download_url);
                 })
                 .catch(error => console.error(error));
+        },
+        setHome() {
+            this.$store.commit('SET_HOME');
         },
     },
     computed: {
@@ -90,9 +95,17 @@ export default {
 }
 .v-autocomplete {
     margin-bottom: -15px;
-    margin-left: -10px;
 }
 .v-subheader {
     text-decoration: underline;
+}
+.home {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
 }
 </style>

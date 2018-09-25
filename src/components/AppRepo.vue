@@ -1,19 +1,26 @@
 <template>
-    <v-card class="main" v-if="GithubRepoLink">
+    <v-card v-if="GithubRepoLink">
         <v-card-title primary-title>
-            <v-btn round small icon color="grey">
-                <v-icon style="color:white">star</v-icon>
-            </v-btn>
+
             <div>
                 <h3 class="headline mb-0">{{ this.GithubRepoName }}</h3>
             </div>
         </v-card-title>
         <v-card-actions>
-
-            <v-btn flat :href="GithubRepoURL">Visit GitHub</v-btn>
-            <v-btn flat>Share</v-btn>
-            <v-spacer></v-spacer>
-            <v-btn icon @click="show = !show">
+            <v-btn flat icon>
+                <v-icon>star
+                </v-icon>
+            </v-btn>
+            <v-btn flat small :href="GithubRepoURL" class="mx-0 px-0">GitHub
+                <v-icon style="padding-left:5px">fab fa-github-alt
+                </v-icon>
+            </v-btn>
+            <v-btn flat small>Share
+                <v-icon style="padding-left:5px">fa fa-share
+                </v-icon>
+            </v-btn>
+            <br>
+            <v-btn flat icon @click="show = !show">
                 <v-icon>{{ show ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
             </v-btn>
         </v-card-actions>
@@ -68,7 +75,7 @@ export default {
 </script>
 
 <style>
-.main {
+.v-card {
     max-width: 100%;
     max-height: 100%;
     overflow: auto;

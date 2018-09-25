@@ -7,12 +7,16 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
     state: {
         AwesomeData,
+        GithubRepo: '',
         GithubRepoLink: '',
         GithubRepoName: '',
         GithubRepoURL: '',
     },
     getters: {},
     mutations: {
+        SET_REPO: (state, payload) => {
+            state.GithubRepo = payload
+        },
         SET_REPONAME: (state, payload) => {
             state.GithubRepoName = payload
         },
@@ -21,6 +25,10 @@ export const store = new Vuex.Store({
         },
         SET_REPOLINK: (state, payload) => {
             state.GithubRepoLink = payload
+        },
+        SET_HOME: (state) => {
+            state.GithubRepo = '';
+            state.GithubRepoLink = '';
         }
     },
     actions: {},
