@@ -14,7 +14,7 @@
                         </v-list-tile-content>
                     </v-list-tile>
                     <v-list v-for="items in AwesomeData[subject]" :key="items.name" dense>
-                        <v-list-tile @click="passRepo(items.name, items.url, items.repo)">
+                        <v-list-tile @click="model = items" to="/">
                             <v-icon>subdirectory_arrow_right</v-icon>
                             <v-list-tile-action>{{ items.name }}</v-list-tile-action>
                         </v-list-tile>
@@ -23,16 +23,19 @@
             </v-list>
         </v-navigation-drawer>
         <v-toolbar app dense>
-            <button class="home" @click="setHome">
+            <button class="home" @click="$router.push('/')">
                 <v-toolbar-title class="font-weight-bolder">awesomely</v-toolbar-title>
             </button>
             <v-spacer></v-spacer>
+            <button class="home" @click="$router.push('/dash')">
+                <v-toolbar-title class="font-weight-bolder">dash</v-toolbar-title>
+            </button>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
         <v-content class="mb-4">
             <router-view />
         </v-content>
-        <v-footer absolute class="text-xs-center justify-center">
+        <v-footer absolute class="justify-center">
             <span>
                 Made with ❤ by
                 <a href="http://blakejs.com">BlakeJS</a>
@@ -45,45 +48,27 @@
 import { mapState } from 'vuex';
 import AwesomeData from '../static/awesome.json';
 
-let nameAwesome = () => {
-    let entries = Object.entries(AwesomeData);
-    let names = entries.map(name => name[1]).flat();
-    return names;
-};
-
 export default {
     data: () => ({
+        names: Object.values(AwesomeData).flat(),
         drawer: null,
-        names: nameAwesome(),
         search: null,
         model: null,
     }),
-    methods: {
-        passRepo(name, url, repo) {
-            this.$store.commit('SET_REPONAME', name);
-            this.$store.commit('SET_REPOURL', url);
-            this.$store.commit('SET_REPO', repo);
-            fetch('https://api.github.com/repos/' + repo + '/readme')
-                .then(response => {
-                    return response.json();
-                })
-                .then(data => {
-                    this.$store.commit('SET_REPOLINK', data.download_url);
-                })
-                .catch(error => console.error(error));
-        },
-        setHome() {
-            this.$store.commit('SET_HOME');
-        },
-    },
+    methods: {},
     computed: {
-        ...mapState(['AwesomeData']),
+        ...mapState([
+            'AwesomeData',
+            'ItemModel',
+            'UserSaved',
+            'DownloadUrl',
+            'Readme',
+        ]),
     },
     watch: {
         model(val) {
-            if (this.model) {
-                this.passRepo(this.model.name, this.model.url, this.model.repo);
-            }
+            this.$store.commit('SET_ITEM_MODEL', this.model);
+            this.$store.dispatch('fetchDownloadUrl', this.model.repo);
         },
     },
 };

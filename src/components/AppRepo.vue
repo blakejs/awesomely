@@ -1,17 +1,17 @@
 <template>
-    <v-card v-if="GithubRepoLink">
+    <v-card v-if="DownloadUrl">
         <v-card-title primary-title>
 
             <div>
-                <h3 class="headline mb-0">{{ this.GithubRepoName }}</h3>
+                <h3 class="headline mb-0">{{ this.ItemModel.name }}</h3>
             </div>
         </v-card-title>
         <v-card-actions>
-            <v-btn flat icon>
+            <v-btn flat icon @click="userSaved">
                 <v-icon>star
                 </v-icon>
             </v-btn>
-            <v-btn flat small :href="GithubRepoURL" class="mx-0 px-0">GitHub
+            <v-btn flat small :href="ItemModel.url" class="mx-0 px-0">GitHub
                 <v-icon style="padding-left:5px">fab fa-github-alt
                 </v-icon>
             </v-btn>
@@ -28,7 +28,7 @@
         <v-slide-y-transition>
             <v-card-text v-show="show">
                 <v-progress-linear :indeterminate="true" color="primary" v-if="loading"></v-progress-linear>
-                <vue-markdown :html="true" :source="readme" :toc="true" v-else></vue-markdown>
+                <vue-markdown :html="true" :source="Readme" :toc="true" v-else></vue-markdown>
             </v-card-text>
         </v-slide-y-transition>
     </v-card>
@@ -48,28 +48,19 @@ export default {
         VueMarkdown,
     },
     methods: {
-        getReadme() {
-            this.loading = true;
-            fetch(this.$store.state.GithubRepoLink)
-                .then(response => {
-                    return response.text();
-                })
-                .then(data => {
-                    this.readme = data;
-                })
-                .catch(error => console.error(error))
-                .finally(() => (this.loading = false));
+        userSaved() {
+            this.$store.dispatch('SET_SAVED', this.$store.state.ItemModel);
         },
     },
     watch: {
-        GithubRepoLink(val, oldval) {
+        DownloadUrl(val) {
             this.show = true;
-            this.getReadme();
+            this.$store.dispatch('fetchReadme', this.DownloadUrl);
         },
         deep: true,
     },
     computed: {
-        ...mapState(['GithubRepoLink', 'GithubRepoName', 'GithubRepoURL']),
+        ...mapState(['ItemModel', 'DownloadUrl', 'Readme']),
     },
 };
 </script>
