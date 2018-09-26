@@ -1,9 +1,7 @@
 <template>
-    <v-container fluid class="px-3">
-        <v-layout justify-center align-center row>
-            <v-flex md4 xs12>
-                <app-dash></app-dash>
-            </v-flex>
+    <v-container fluid>
+        <v-layout column wrap>
+            <app-dash></app-dash>
         </v-layout>
     </v-container>
 </template>

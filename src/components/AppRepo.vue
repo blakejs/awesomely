@@ -1,7 +1,6 @@
 <template>
     <v-card v-if="DownloadUrl">
         <v-card-title primary-title>
-
             <div>
                 <h3 class="headline mb-0">{{ this.ItemModel.name }}</h3>
             </div>
