@@ -13,12 +13,20 @@
             </v-card-actions>
         </v-card>
         <div class="grid">
-            <v-card v-for="items in getUserSaved" :key="items.name" width="100%">
+            <v-card v-for="items in getUserSaved" :key="items.name" style="display:grid;grid-template-rows: 1fr 50px;">
                 <v-card-title primary-title>
-                    <div>
-                        <h3 class="headline mb-0">{{ items.name }}</h3>
+                    <div style="align-self:start">
+                        <h3 class="headline">{{ items.name }}</h3>
+                        <h5 class="subheading">{{ items.cate }}</h5>
                     </div>
                 </v-card-title>
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn flat icon>
+                        <v-icon>delete
+                        </v-icon>
+                    </v-btn>
+                </v-card-actions>
             </v-card>
         </div>
     </v-flex>
