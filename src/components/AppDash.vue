@@ -1,17 +1,9 @@
 <template>
     <v-flex>
-        <v-card v-if="this.$store.state.UserSaved.length === 0">
-            <v-card-title primary-title>
-                <div>
-                    <h3 class="headline mb-0">Go star some stuff!!!</h3>
-                    <div>description</div>
-                </div>
-            </v-card-title>
-            <v-card-actions>
-                <v-btn flat color="primary">text</v-btn>
-                <v-btn flat color="primary">text</v-btn>
-            </v-card-actions>
-        </v-card>
+        <div v-if="this.$store.state.UserSaved.length === 0" style="display:grid;justify-items:center">
+            <img src="../assets/shruggin.svg" width="40%">
+            <div class="title text-xs-center">Go star you some stuff partner!</div>
+        </div>
         <div class="grid">
             <v-card v-for="items in getUserSaved" :key="items.name" style="display:grid;grid-template-rows: 1fr 50px;">
                 <v-card-title primary-title>
