@@ -1,11 +1,11 @@
 <template>
     <v-flex>
-        <div v-if="this.$store.state.UserSaved.length === 0" style="display:grid;justify-items:center">
+        <div v-if="this.$store.state.SavedItems.length === 0" style="display:grid;justify-items:center">
             <img src="../assets/shruggin.svg" width="40%">
             <div class="title text-xs-center">Go star you some stuff partner!</div>
         </div>
         <div class="grid">
-            <v-card v-for="items in getUserSaved" :key="items.name" style="display:grid;grid-template-rows: 1fr 50px;">
+            <v-card v-for="items in getSavedItems" :key="items.name" style="display:grid;grid-template-rows: 1fr 50px;">
                 <v-card-title primary-title>
                     <div style="align-self:start">
                         <h3 class="headline">{{ items.name }}</h3>
@@ -32,7 +32,7 @@ export default {
         show: true,
     }),
     computed: {
-        ...mapGetters(['getUserSaved']),
+        ...mapGetters(['getSavedItems']),
     },
 };
 </script>

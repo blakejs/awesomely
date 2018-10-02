@@ -25,12 +25,15 @@ export const store = new Vuex.Store({
         ItemModel: {},
         DownloadUrl: '',
         Readme: '',
-        UserSaved: [],
+        SavedItems: [],
         Loading: null,
     },
     getters: {
-        getUserSaved: state => {
-            return state.UserSaved;
+        itemModel: state => {
+            return state.ItemModel
+        },
+        savedItems: state => {
+            return state.SavedItems;
         }
     },
     mutations: {
@@ -41,8 +44,8 @@ export const store = new Vuex.Store({
             state.DownloadUrl = payload;
         },
         SET_SAVED: (state, payload) => {
-            if (!state.UserSaved.find(item => item.repo === payload.repo)) {
-                state.UserSaved.push(payload);
+            if (!state.SavedItems.find(item => item.repo === payload.repo)) {
+                state.SavedItems.push(payload);
             }
         },
         SET_README: (state, payload) => {
@@ -50,10 +53,6 @@ export const store = new Vuex.Store({
         },
     },
     actions: {
-        SET_SAVED: (context, payload) => {
-            context.commit('SET_SAVED', payload);
-            Cookies.set('data', context.state.UserSaved);
-        },
         fetchDownloadUrl: ({
             commit
         }, payload) => {

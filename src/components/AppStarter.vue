@@ -44,11 +44,8 @@
 import { mapState } from 'vuex';
 
 export default {
-    data: () => ({
-        show: true,
-    }),
     computed: {
-        ...mapState(['ItemModel', 'DownloadUrl', 'UserSaved']),
+        ...mapState(['DownloadUrl']),
     },
 };
 </script>

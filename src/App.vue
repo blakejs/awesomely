@@ -2,7 +2,7 @@
     <v-app>
         <v-navigation-drawer v-model="drawer" fixed right app>
             <v-toolbar dense color="white">
-                <v-autocomplete v-model="model" :search-input.sync="search" :items="names" color="white" item-text="name" placeholder="Search awesomely" append-icon="search" hide-selected return-object />
+                <v-autocomplete v-model="model" :search-input.sync="search" :items="items" color="white" item-text="name" placeholder="Search awesomely" append-icon="search" hide-selected return-object />
             </v-toolbar>
             <v-list dense class="mb-5">
                 <v-subheader>Awesomes</v-subheader>
@@ -50,25 +50,17 @@ import AwesomeData from '../static/awesome.json';
 
 export default {
     data: () => ({
-        names: Object.values(AwesomeData).flat(),
+        items: Object.values(AwesomeData).flat(),
         drawer: null,
         search: null,
         model: null,
     }),
-    methods: {},
     computed: {
-        ...mapState([
-            'AwesomeData',
-            'ItemModel',
-            'UserSaved',
-            'DownloadUrl',
-            'Readme',
-        ]),
+        ...mapState(['AwesomeData']),
     },
     watch: {
-        model(val) {
+        model() {
             this.$store.commit('SET_ITEM_MODEL', this.model);
-            this.$store.dispatch('fetchDownloadUrl', this.model.repo);
         },
     },
 };

@@ -4,22 +4,22 @@
             <div>
                 <h3 class="headline mb-0">{{ this.ItemModel.name }}</h3>
             </div>
-        </v-card-title>
-        <v-card-actions>
-            <v-btn flat icon @click="userSaved">
-                <v-icon>star
-                </v-icon>
+            <v-spacer></v-spacer>
+            <v-btn flat @click="SaveItems">
+                Save
+                <v-icon>bookmark_border</v-icon>
             </v-btn>
+        </v-card-title>
+
+        <v-card-actions>
             <v-btn flat small :href="ItemModel.url" class="mx-0 px-0">GitHub
-                <v-icon style="padding-left:5px">fab fa-github-alt
-                </v-icon>
+                <v-icon style="padding-left:5px">fab fa-github-alt</v-icon>
             </v-btn>
             <v-btn flat small>Share
-                <v-icon style="padding-left:5px">fa fa-share
-                </v-icon>
+                <v-icon style="padding-left:5px">fa fa-share</v-icon>
             </v-btn>
-            <br>
-            <v-btn flat icon @click="show = !show">
+            <v-spacer></v-spacer>
+            <v-btn flat icon small @click="show = !show">
                 <v-icon>{{ show ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
             </v-btn>
         </v-card-actions>
@@ -47,14 +47,20 @@ export default {
         VueMarkdown,
     },
     methods: {
-        userSaved() {
+        SaveItems() {
             this.$store.dispatch('SET_SAVED', this.$store.state.ItemModel);
         },
     },
     watch: {
-        DownloadUrl(val) {
+        ItemModel() {
             this.show = true;
-            this.$store.dispatch('fetchReadme', this.DownloadUrl);
+            this.loading = true;
+            this.$store.dispatch('fetchDownloadUrl', this.ItemModel.repo);
+        },
+        DownloadUrl() {
+            this.$store
+                .dispatch('fetchReadme', this.DownloadUrl)
+                .then((this.loading = false));
         },
         deep: true,
     },
