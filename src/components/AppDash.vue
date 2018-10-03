@@ -1,11 +1,11 @@
 <template>
     <v-flex>
-        <div v-if="this.$store.state.SavedItems.length === 0" style="display:grid;justify-items:center">
+        <div class="shruggin" v-if="this.$store.state.SavedItems.length === 0">
             <img src="../assets/shruggin.svg" width="40%">
             <div class="title text-xs-center">Go star you some stuff partner!</div>
         </div>
         <div class="grid">
-            <v-card v-for="items in savedItems" :key="items.name" style="display:grid;grid-template-rows: 1fr 50px;">
+            <v-card v-for="items in savedItems" :key="items.name">
                 <v-card-title primary-title>
                     <div style="align-self:start">
                         <h3 class="headline">{{ items.name }}</h3>
@@ -14,9 +14,8 @@
                 </v-card-title>
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn flat icon>
-                        <v-icon>delete
-                        </v-icon>
+                    <v-btn flat icon @click="model = items">
+                        <v-icon>delete</v-icon>
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -30,14 +29,30 @@ import { mapGetters } from 'vuex';
 export default {
     data: () => ({
         show: true,
+        model: null,
     }),
+    watch: {
+        model() {
+            this.$store.commit('SET_UNSAVE_ITEM', this.model);
+        },
+    },
     computed: {
         ...mapGetters(['savedItems']),
     },
 };
 </script>
 
-<style>
+<style scoped>
+.v-card {
+    display: grid;
+    grid-template-rows: 1fr 50px;
+}
+
+.shruggin {
+    display: grid;
+    justify-items: center;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
