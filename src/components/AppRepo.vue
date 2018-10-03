@@ -1,11 +1,15 @@
 <template>
-    <v-card v-if="DownloadUrl">
+    <v-card v-if="ItemModel.repo">
         <v-card-title primary-title>
             <div>
                 <h3 class="headline mb-0">{{ this.ItemModel.name }}</h3>
             </div>
             <v-spacer></v-spacer>
-            <v-btn flat @click="SaveItems">
+            <v-btn flat @click="removeItem" v-if="SavedItems.find(item => item.repo === ItemModel.repo)">
+                Saved
+                <v-icon>bookmark</v-icon>
+            </v-btn>
+            <v-btn flat @click="saveItem" v-else>
                 Save
                 <v-icon>bookmark_border</v-icon>
             </v-btn>
@@ -35,7 +39,7 @@
 
 <script>
 import VueMarkdown from 'vue-markdown';
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
     data: () => ({
@@ -47,25 +51,28 @@ export default {
         VueMarkdown,
     },
     methods: {
-        SaveItems() {
-            this.$store.dispatch('SET_SAVED', this.$store.state.ItemModel);
+        saveItem() {
+            this.$store.commit('SET_SAVE_ITEM', this.itemModel);
+        },
+        removeItem() {
+            this.$store.commit('SET_UNSAVE_ITEM', this.itemModel);
         },
     },
     watch: {
-        ItemModel() {
+        itemModel() {
             this.show = true;
             this.loading = true;
-            this.$store.dispatch('fetchDownloadUrl', this.ItemModel.repo);
+            this.$store.dispatch('fetchDownloadUrl', this.itemModel.repo);
         },
         DownloadUrl() {
-            this.$store
-                .dispatch('fetchReadme', this.DownloadUrl)
-                .then((this.loading = false));
+            this.$store.dispatch('fetchReadme', this.DownloadUrl);
+            this.loading = false;
         },
         deep: true,
     },
     computed: {
-        ...mapState(['ItemModel', 'DownloadUrl', 'Readme']),
+        ...mapState(['ItemModel', 'SavedItems', 'DownloadUrl', 'Readme']),
+        ...mapGetters(['itemModel']),
     },
 };
 </script>

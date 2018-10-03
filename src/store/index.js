@@ -43,10 +43,13 @@ export const store = new Vuex.Store({
         SET_DOWNLOAD_URL: (state, payload) => {
             state.DownloadUrl = payload;
         },
-        SET_SAVED: (state, payload) => {
+        SET_SAVE_ITEM: (state, payload) => {
             if (!state.SavedItems.find(item => item.repo === payload.repo)) {
                 state.SavedItems.push(payload);
             }
+        },
+        SET_UNSAVE_ITEM: (state, payload) => {
+            state.SavedItems = state.SavedItems.filter(items => items !== payload)
         },
         SET_README: (state, payload) => {
             state.Readme = payload;

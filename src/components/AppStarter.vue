@@ -1,5 +1,5 @@
 <template>
-    <v-card v-if="!DownloadUrl">
+    <v-card v-if="!ItemModel.repo">
         <div class="pt-3 hero-image">
             <img src="../assets/awesomely.png" alt="Awesomely">
         </div>
@@ -45,7 +45,7 @@ import { mapState } from 'vuex';
 
 export default {
     computed: {
-        ...mapState(['DownloadUrl']),
+        ...mapState(['ItemModel']),
     },
 };
 </script>

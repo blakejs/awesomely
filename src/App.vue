@@ -61,6 +61,7 @@ export default {
     watch: {
         model() {
             this.$store.commit('SET_ITEM_MODEL', this.model);
+            this.$router.push('/');
         },
     },
 };

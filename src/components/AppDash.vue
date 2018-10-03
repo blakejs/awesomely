@@ -5,7 +5,7 @@
             <div class="title text-xs-center">Go star you some stuff partner!</div>
         </div>
         <div class="grid">
-            <v-card v-for="items in getSavedItems" :key="items.name" style="display:grid;grid-template-rows: 1fr 50px;">
+            <v-card v-for="items in savedItems" :key="items.name" style="display:grid;grid-template-rows: 1fr 50px;">
                 <v-card-title primary-title>
                     <div style="align-self:start">
                         <h3 class="headline">{{ items.name }}</h3>
@@ -32,7 +32,7 @@ export default {
         show: true,
     }),
     computed: {
-        ...mapGetters(['getSavedItems']),
+        ...mapGetters(['savedItems']),
     },
 };
 </script>
