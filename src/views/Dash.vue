@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import AppDash from '../components/AppDash';
+import appDash from '../components/AppDash';
 
 export default {
     components: {
-        'app-dash': AppDash,
+        appDash,
     },
 };
 </script>

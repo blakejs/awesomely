@@ -10,13 +10,13 @@
 </template>
 
 <script>
-import AppStarter from '../components/AppStarter';
-import AppRepo from '../components/AppRepo';
+import appStarter from '../components/AppStarter';
+import appRepo from '../components/AppRepo';
 
 export default {
     components: {
-        'app-starter': AppStarter,
-        'app-repo': AppRepo,
+        appStarter,
+        appRepo,
     },
 };
 </script>
