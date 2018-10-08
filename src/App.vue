@@ -72,7 +72,7 @@ export default {
     background-color: #fc60a850;
 }
 .v-autocomplete {
-    margin-bottom: -15px;
+    margin-bottom: -15px !important;
 }
 .v-subheader {
     text-decoration: underline;
