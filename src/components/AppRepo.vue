@@ -19,9 +19,6 @@
             <v-btn flat small :href="ItemModel.url" class="mx-0 px-0">GitHub
                 <v-icon style="padding-left:5px">fab fa-github-alt</v-icon>
             </v-btn>
-            <v-btn flat small>Share
-                <v-icon style="padding-left:5px">fa fa-share</v-icon>
-            </v-btn>
             <v-spacer></v-spacer>
             <v-btn flat icon small @click="show = !show">
                 <v-icon>{{ show ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>

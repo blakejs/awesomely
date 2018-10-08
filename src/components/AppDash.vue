@@ -13,6 +13,12 @@
                     </div>
                 </v-card-title>
                 <v-card-actions>
+                    <v-btn flat small :href="items.url" class="mx-0 px-0">GitHub
+                        <v-icon style="padding-left:5px">fab fa-github-alt</v-icon>
+                    </v-btn>
+                    <v-btn flat small @click="model = items" to="/" class="mx-0 px-0">View
+                        <v-icon style="padding-left:5px">fa fa-eye</v-icon>
+                    </v-btn>
                     <v-spacer></v-spacer>
                     <v-btn flat icon @click="model = items">
                         <v-icon>delete</v-icon>

@@ -28,7 +28,7 @@
             </button>
             <v-spacer></v-spacer>
             <button class="home" @click="$router.push('/dash')">
-                <v-toolbar-title class="font-weight-bolder">dash</v-toolbar-title>
+                <v-toolbar-title class="font-weight-bolder">dashboard</v-toolbar-title>
             </button>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
