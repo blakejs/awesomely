@@ -1,25 +1,17 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import createPersistedState from 'vuex-persistedstate';
-import Cookies from 'js-cookie';
 import AwesomeData from '../../static/awesome.json';
+import VuexPersist from 'vuex-persist';
 
 Vue.use(Vuex);
 
+const vuexLocalStorage = new VuexPersist({
+    key: 'vuex',
+    storage: window.localStorage,
+})
+
 export const store = new Vuex.Store({
-    plugins: [
-        createPersistedState({
-            storage: {
-                getItem: key => Cookies.get(key),
-                setItem: (key, value) =>
-                    Cookies.set(key, value, {
-                        expires: 3,
-                        secure: true,
-                    }),
-                removeItem: key => Cookies.remove(key),
-            },
-        }),
-    ],
+    plugins: [vuexLocalStorage.plugin],
     state: {
         AwesomeData,
         ItemModel: {},

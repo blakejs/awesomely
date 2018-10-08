@@ -1,6 +1,6 @@
 <template>
     <v-flex>
-        <div class="shruggin" v-if="this.$store.state.SavedItems.length === 0">
+        <div class="shruggin v-card" v-if="this.$store.state.SavedItems.length === 0">
             <img src="../assets/shruggin.svg" width="40%">
             <div class="title text-xs-center">Go star you some stuff partner!</div>
         </div>
