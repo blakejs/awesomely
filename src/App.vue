@@ -24,11 +24,11 @@
         </v-navigation-drawer>
         <v-toolbar app dense>
             <button class="home" @click="$router.push('/')">
-                <v-toolbar-title class="font-weight-bolder">awesomely</v-toolbar-title>
+                <v-toolbar-title class="font-weight-bolder">Awesomely</v-toolbar-title>
             </button>
             <v-spacer></v-spacer>
             <button class="home" @click="$router.push('/dash')">
-                <v-toolbar-title class="font-weight-bolder">dashboard</v-toolbar-title>
+                <v-toolbar-title class="font-weight-bolder">Dashboard</v-toolbar-title>
             </button>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
