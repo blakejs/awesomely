@@ -1,6 +1,7 @@
 # Awesomely
 
-> Making your Awesome GitHub Resources accessible and organized.
+> Compile and curate your favorite AWESOME Github resources in one place
+https://blakejs.github.io/awesomely/#/dash
 
 **Made With:**
 
@@ -13,6 +14,7 @@
 
 ## Table of Contents
 
+-   [Summary](#summary)
 -   [Installation](#installation)
 -   [Features](#features)
 -   [Contributing](#contributing)
@@ -20,6 +22,15 @@
 
 ---
 
+## Summary
+
+*Awesomely* is a website where you can find the complete **Awesome** list, save and keep your favorite __awesomes__ on your dashboard, and go directly into each __awesome__ GithHub repository.
+
+#### What is the Awesome List?
+The Awesome List a repository on GitHub where you can find countless links *Awesome* GitHub repositories. This list includes repos for resources on programming languages, gaming, development enviroments, cyber security, hardware, and many others!
+
+#### What makes a resource Awesome?
+The **Awesome Manifesto** - "Research if the stuff you are including is actually awesome. Only put stuff on the list that you or another contributor can personally recommend. You should rather leave stuff out than include too much. After all, it is a curation, not a collection."
 ## Installation
 
 > Simply git clone, cd, npm install
@@ -34,6 +45,10 @@ cd awesomely
 # Install
 npm i
 ```
+## Features
+1) Browse through the entire list of *awesomes*
+2) Save your favorite *awesome* resources into your **Dashboard**
+3) Go to an *awesome* resource on your dashboard and click on it to go directly to that GitHub repository
 
 ### Setup
 
