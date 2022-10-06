@@ -21,7 +21,9 @@ https://blakejs.github.io/awesomely/#/dash
 -   [License](#license)
 
 ---
-##Summary
+
+## Summary
+
 *Awesomely* is a website where you can find the complete **Awesome** list, save and keep your favorite __awesomes__ on your dashboard, and go directly into each __awesome__ GithHub repository.
 
 #### What is the Awesome List?
@@ -46,7 +48,8 @@ npm i
 ## Features
 1) Browse through the entire list of *awesomes*
 2) Save your favorite *awesome* resources into your **Dashboard**
-3) Go to an *awesome* resource on your dashboard and click on it to go directly to that    GitHub repository
+3) Go to an *awesome* resource on your dashboard and click on it to go directly to that GitHub repository
+
 ### Setup
 
 ```bash
