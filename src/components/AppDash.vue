@@ -1,9 +1,9 @@
 <template>
     <v-flex>
-        <div class="shruggin v-card" v-if="this.$store.state.SavedItems.length === 0">
+        <v-card class="shruggin" v-if="this.$store.state.SavedItems.length === 0">
             <img src="../assets/shruggin.svg" width="40%">
             <div class="title text-xs-center">Go star you some stuff partner!</div>
-        </div>
+        </v-card>
         <div class="grid">
             <v-card v-for="items in savedItems" :key="items.name">
                 <v-card-title primary-title>
@@ -16,7 +16,7 @@
                     <v-btn flat small :href="items.url" class="mx-0 px-0">GitHub
                         <v-icon style="padding-left:5px">fab fa-github-alt</v-icon>
                     </v-btn>
-                    <v-btn flat small @click="model = items" to="/" class="mx-0 px-0">View
+                    <v-btn flat small @click="item = items" class="mx-0 px-0">View
                         <v-icon style="padding-left:5px">fa fa-eye</v-icon>
                     </v-btn>
                     <v-spacer></v-spacer>
@@ -36,14 +36,19 @@ export default {
     data: () => ({
         show: true,
         model: null,
+        item: null,
     }),
     watch: {
         model() {
             this.$store.commit('SET_UNSAVE_ITEM', this.model);
         },
+        item() {
+            this.$store.commit('SET_ITEM_MODEL', this.item);
+            this.$router.push('/');
+        },
     },
     computed: {
-        ...mapGetters(['savedItems']),
+        ...mapGetters(['savedItems', 'itemModel']),
     },
 };
 </script>
