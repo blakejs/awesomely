@@ -48,7 +48,7 @@ export default {
         },
     },
     computed: {
-        ...mapGetters(['savedItems', 'itemModel']),
+        ...mapGetters(['savedItems']),
     },
 };
 </script>
