@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
     data: () => ({
@@ -44,11 +44,16 @@ export default {
         },
         item() {
             this.$store.commit('SET_ITEM_MODEL', this.item);
+            this.$store.dispatch('fetchDownloadUrl', this.itemModel.repo);
             this.$router.push('/');
         },
+        DownloadUrl() {
+            this.$store.dispatch('fetchReadme', this.DownloadUrl);
+        }
     },
     computed: {
-        ...mapGetters(['savedItems']),
+        ...mapState(['ItemModel', 'SavedItems', 'DownloadUrl']),
+        ...mapGetters(['savedItems', 'itemModel']),
     },
 };
 </script>
