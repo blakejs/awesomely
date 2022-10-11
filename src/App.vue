@@ -1,8 +1,10 @@
 <template>
-    <v-app>
+    <v-app :dark="dark">
         <v-navigation-drawer v-model="drawer" fixed right app>
-            <v-toolbar dense color="white">
-                <v-autocomplete v-model="model" :search-input.sync="search" :items="items" color="white" item-text="name" placeholder="Search awesomely" append-icon="search" hide-selected return-object />
+            <v-toolbar dense>
+                <v-autocomplete v-model="model" :search-input.sync="search" :items="items" 
+                  item-text="name" placeholder="Search awesomely" append-icon="search" 
+                  hide-selected return-object />
             </v-toolbar>
             <v-list dense class="mb-5">
                 <v-subheader>Awesomes</v-subheader>
@@ -23,23 +25,29 @@
             </v-list>
         </v-navigation-drawer>
         <v-toolbar app dense>
-            <button class="home" @click="$router.push('/')">
+            <button class="home" @click="$router.push('/')" v-if="this.$store.state.DownloadUrl == 0">
                 <v-toolbar-title class="font-weight-bolder">Awesomely</v-toolbar-title>
             </button>
-            <v-spacer></v-spacer>
-            <button class="home" @click="$router.push('/dash')">
+            <button class="home" @click="$router.push('/dash')" v-else>
                 <v-toolbar-title class="font-weight-bolder">Dashboard</v-toolbar-title>
             </button>
+            <v-spacer></v-spacer>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
         <v-content class="mb-4">
             <router-view />
         </v-content>
-        <v-footer absolute class="justify-center">
-            <span>
-                Made with ❤ by
-                <a href="http://blakejs.com">BlakeJS</a>
-            </span>
+        <v-footer absolute class="flex justify-space-between">
+            <div>
+              <span class="pl-2">
+                Made with ❤ by <a href="https://blakejs.com">BlakeJS</a>
+              </span>
+            </div>
+            <div>
+              <v-btn flat @click="dark = !dark">
+                <v-icon>dark_mode</v-icon>
+              </v-btn>
+            </div>
         </v-footer>
     </v-app>
 </template>
@@ -54,9 +62,10 @@ export default {
         drawer: null,
         search: null,
         model: null,
+        dark: true
     }),
     computed: {
-        ...mapState(['AwesomeData']),
+        ...mapState(['AwesomeData', 'itemModel']),
     },
     watch: {
         model() {
@@ -69,7 +78,7 @@ export default {
 
 <style scoped>
 .v-content {
-    background-color: #fc60a850;
+    background-color: #f0f0f050;
 }
 .v-autocomplete {
     margin-bottom: -15px !important;
