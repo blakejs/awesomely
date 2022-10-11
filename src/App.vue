@@ -43,9 +43,9 @@
                 Made with ❤ by <a href="https://blakejs.com">BlakeJS</a>
               </span>
             </div>
-            <div>
+            <div class="pr-2">
               <v-btn flat @click="dark = !dark">
-                <v-icon>dark_mode</v-icon>
+                <v-icon>{{ dark ? 'light_mode' : 'dark_mode' }}</v-icon>
               </v-btn>
             </div>
         </v-footer>
@@ -94,5 +94,9 @@ export default {
     -ms-user-select: none;
     user-select: none;
     outline: none;
+}
+.v-footer .v-btn {
+  max-height: 30px;
+  margin: 0;
 }
 </style>
