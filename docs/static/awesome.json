@@ -91,19 +91,25 @@
       "cate": "Platforms"
     },
     {
-      "name": "macOS - Screensavers",
+      "name": "Linux - Omarchy",
+      "url": "https://github.com/aorumbayev/awesome-omarchy",
+      "repo": "aorumbayev/awesome-omarchy",
+      "cate": "Platforms"
+    },
+    {
+      "name": "Linux - Screensavers",
       "url": "https://github.com/agarrharr/awesome-macos-screensavers",
       "repo": "agarrharr/awesome-macos-screensavers",
       "cate": "Platforms"
     },
     {
-      "name": "macOS - Apps",
+      "name": "Linux - Apps",
       "url": "https://github.com/jaywcjlove/awesome-mac",
       "repo": "jaywcjlove/awesome-mac",
       "cate": "Platforms"
     },
     {
-      "name": "macOS - Open Source Apps",
+      "name": "Linux - Open Source Apps",
       "url": "https://github.com/serhii-londar/open-source-mac-os-apps",
       "repo": "serhii-londar/open-source-mac-os-apps",
       "cate": "Platforms"
@@ -134,8 +140,14 @@
     },
     {
       "name": "Windows",
-      "url": "https://github.com/Awesome-Windows/Awesome",
-      "repo": "Awesome-Windows/Awesome",
+      "url": "https://github.com/0pandadev/awesome-windows",
+      "repo": "0pandadev/awesome-windows",
+      "cate": "Platforms"
+    },
+    {
+      "name": "Windows - PowerToys Run Plugins",
+      "url": "https://github.com/hlaueriksson/awesome-powertoys-run-plugins",
+      "repo": "hlaueriksson/awesome-powertoys-run-plugins",
       "cate": "Platforms"
     },
     {
@@ -323,6 +335,36 @@
       "url": "https://github.com/Esri/awesome-arcgis-developer",
       "repo": "Esri/awesome-arcgis-developer",
       "cate": "Platforms"
+    },
+    {
+      "name": "Bluetooth Low Energy",
+      "url": "https://github.com/dotintent/awesome-ble",
+      "repo": "dotintent/awesome-ble",
+      "cate": "Platforms"
+    },
+    {
+      "name": "Uno Platform",
+      "url": "https://github.com/MartinZikmund/awesome-uno-platform",
+      "repo": "MartinZikmund/awesome-uno-platform",
+      "cate": "Platforms"
+    },
+    {
+      "name": "Google Cloud",
+      "url": "https://github.com/GoogleCloudPlatform/awesome-google-cloud",
+      "repo": "GoogleCloudPlatform/awesome-google-cloud",
+      "cate": "Platforms"
+    },
+    {
+      "name": "Firebase Genkit",
+      "url": "https://github.com/xavidop/awesome-firebase-genkit",
+      "repo": "xavidop/awesome-firebase-genkit",
+      "cate": "Platforms"
+    },
+    {
+      "name": "Backstage",
+      "url": "https://github.com/shano/awesome-backstage",
+      "repo": "shano/awesome-backstage",
+      "cate": "Platforms"
     }
   ],
   "Programming Languages": [
@@ -495,6 +537,12 @@
       "cate": "Programming Languages"
     },
     {
+      "name": "Rust - Pest",
+      "url": "https://github.com/pest-parser/awesome-pest",
+      "repo": "pest-parser/awesome-pest",
+      "cate": "Programming Languages"
+    },
+    {
       "name": "Haskell",
       "url": "https://github.com/krispo/awesome-haskell",
       "repo": "krispo/awesome-haskell",
@@ -645,6 +693,12 @@
       "cate": "Programming Languages"
     },
     {
+      "name": "Java - J2ME",
+      "url": "https://github.com/hstsethi/awesome-j2me",
+      "repo": "hstsethi/awesome-j2me",
+      "cate": "Programming Languages"
+    },
+    {
       "name": "Kotlin",
       "url": "https://github.com/KotlinBy/awesome-kotlin",
       "repo": "KotlinBy/awesome-kotlin",
@@ -771,9 +825,27 @@
       "cate": "Programming Languages"
     },
     {
-      "name": "Zig",
-      "url": "https://github.com/catdevnull/awesome-zig",
-      "repo": "catdevnull/awesome-zig",
+      "name": "Move",
+      "url": "https://github.com/MystenLabs/awesome-move",
+      "repo": "MystenLabs/awesome-move",
+      "cate": "Programming Languages"
+    },
+    {
+      "name": "Esolangs",
+      "url": "https://github.com/angrykoala/awesome-esolangs",
+      "repo": "angrykoala/awesome-esolangs",
+      "cate": "Programming Languages"
+    },
+    {
+      "name": "VBA",
+      "url": "https://github.com/sancarn/awesome-vba",
+      "repo": "sancarn/awesome-vba",
+      "cate": "Programming Languages"
+    },
+    {
+      "name": "F#",
+      "url": "https://github.com/fsprojects/awesome-fsharp",
+      "repo": "fsprojects/awesome-fsharp",
       "cate": "Programming Languages"
     }
   ],
@@ -852,8 +924,8 @@
     },
     {
       "name": "Web Components",
-      "url": "https://github.com/mateusortiz/webcomponents-the-right-way",
-      "repo": "mateusortiz/webcomponents-the-right-way",
+      "url": "https://github.com/web-padawan/awesome-web-components",
+      "repo": "web-padawan/awesome-web-components",
       "cate": "Front-End Development"
     },
     {
@@ -1049,7 +1121,7 @@
       "cate": "Front-End Development"
     },
     {
-      "name": "Ionic Framework 2",
+      "name": "Ionic Framework",
       "url": "https://github.com/candelibas/awesome-ionic",
       "repo": "candelibas/awesome-ionic",
       "cate": "Front-End Development"
@@ -1251,6 +1323,42 @@
       "url": "https://github.com/mdbootstrap/awesome-mdbootstrap",
       "repo": "mdbootstrap/awesome-mdbootstrap",
       "cate": "Front-End Development"
+    },
+    {
+      "name": "Master CSS",
+      "url": "https://github.com/master-co/awesome-master-css",
+      "repo": "master-co/awesome-master-css",
+      "cate": "Front-End Development"
+    },
+    {
+      "name": "Hydrogen",
+      "url": "https://github.com/shopify/awesome-hydrogen",
+      "repo": "shopify/awesome-hydrogen",
+      "cate": "Front-End Development"
+    },
+    {
+      "name": "Tiny JS",
+      "url": "https://github.com/thoughtspile/awesome-tiny-js",
+      "repo": "thoughtspile/awesome-tiny-js",
+      "cate": "Front-End Development"
+    },
+    {
+      "name": "Frontend GIS",
+      "url": "https://github.com/joewdavies/awesome-frontend-gis",
+      "repo": "joewdavies/awesome-frontend-gis",
+      "cate": "Front-End Development"
+    },
+    {
+      "name": "WebGPU",
+      "url": "https://github.com/mikbry/awesome-webgpu",
+      "repo": "mikbry/awesome-webgpu",
+      "cate": "Front-End Development"
+    },
+    {
+      "name": "WebAssembly",
+      "url": "https://github.com/idematos/awesome-webassembly",
+      "repo": "idematos/awesome-webassembly",
+      "cate": "Front-End Development"
     }
   ],
   "Back-End Development": [
@@ -1339,7 +1447,7 @@
       "cate": "Back-End Development"
     },
     {
-      "name": "Useful .htaccess Snippets",
+      "name": "Useful `.htaccess` Snippets",
       "url": "https://github.com/phanan/htaccess",
       "repo": "phanan/htaccess",
       "cate": "Back-End Development"
@@ -1432,6 +1540,24 @@
       "name": "Fiber",
       "url": "https://github.com/gofiber/awesome-fiber",
       "repo": "gofiber/awesome-fiber",
+      "cate": "Back-End Development"
+    },
+    {
+      "name": "Kustomize",
+      "url": "https://github.com/DevOpsHiveHQ/awesome-kustomize",
+      "repo": "DevOpsHiveHQ/awesome-kustomize",
+      "cate": "Back-End Development"
+    },
+    {
+      "name": "OpenTofu",
+      "url": "https://github.com/virtualroot/awesome-opentofu",
+      "repo": "virtualroot/awesome-opentofu",
+      "cate": "Back-End Development"
+    },
+    {
+      "name": "Reflex",
+      "url": "https://github.com/reflex-dev/awesome-reflex",
+      "repo": "reflex-dev/awesome-reflex",
       "cate": "Back-End Development"
     }
   ],
@@ -1651,6 +1777,18 @@
       "url": "https://github.com/jyguyomarch/awesome-conversational-ai",
       "repo": "jyguyomarch/awesome-conversational-ai",
       "cate": "Computer Science"
+    },
+    {
+      "name": "Generative AI",
+      "url": "https://github.com/steven2358/awesome-generative-ai",
+      "repo": "steven2358/awesome-generative-ai",
+      "cate": "Computer Science"
+    },
+    {
+      "name": "Position-Based Quantum Cryptography",
+      "url": "https://github.com/Renaller/awesome-position-based-quantum-cryptography",
+      "repo": "Renaller/awesome-position-based-quantum-cryptography",
+      "cate": "Computer Science"
     }
   ],
   "Big Data": [
@@ -1700,6 +1838,12 @@
       "name": "Splunk",
       "url": "https://github.com/sduff/awesome-splunk",
       "repo": "sduff/awesome-splunk",
+      "cate": "Big Data"
+    },
+    {
+      "name": "Network Analysis",
+      "url": "https://github.com/briatte/awesome-network-analysis",
+      "repo": "briatte/awesome-network-analysis",
       "cate": "Big Data"
     }
   ],
@@ -1774,6 +1918,18 @@
       "name": "AGI & CoCoSci",
       "url": "https://github.com/YuzheSHI/awesome-agi-cocosci",
       "repo": "YuzheSHI/awesome-agi-cocosci",
+      "cate": "Theory"
+    },
+    {
+      "name": "Complex Systems",
+      "url": "https://github.com/sellisd/awesome-complexity",
+      "repo": "sellisd/awesome-complexity",
+      "cate": "Theory"
+    },
+    {
+      "name": "VLM Architectures",
+      "url": "https://github.com/gokayfem/awesome-vlm-architectures",
+      "repo": "gokayfem/awesome-vlm-architectures",
       "cate": "Theory"
     }
   ],
@@ -1874,8 +2030,8 @@
     },
     {
       "name": "Open Source Games",
-      "url": "https://github.com/leereilly/games",
-      "repo": "leereilly/games",
+      "url": "https://github.com/michelpereira/awesome-open-source-games",
+      "repo": "michelpereira/awesome-open-source-games",
       "cate": "Gaming"
     },
     {
@@ -1924,6 +2080,12 @@
       "name": "Minecraft",
       "url": "https://github.com/bs-community/awesome-minecraft",
       "repo": "bs-community/awesome-minecraft",
+      "cate": "Gaming"
+    },
+    {
+      "name": "ComputerCraft",
+      "url": "https://github.com/tomodachi94/awesome-computercraft",
+      "repo": "tomodachi94/awesome-computercraft",
       "cate": "Gaming"
     },
     {
@@ -1984,6 +2146,42 @@
       "name": "Esports",
       "url": "https://github.com/strift/awesome-esports",
       "repo": "strift/awesome-esports",
+      "cate": "Gaming"
+    },
+    {
+      "name": "Learn Gamedev",
+      "url": "https://github.com/notpresident35/awesome-learn-gamedev",
+      "repo": "notpresident35/awesome-learn-gamedev",
+      "cate": "Gaming"
+    },
+    {
+      "name": "Game Engine Development",
+      "url": "https://github.com/stevinz/awesome-game-engine-dev",
+      "repo": "stevinz/awesome-game-engine-dev",
+      "cate": "Gaming"
+    },
+    {
+      "name": "GameMaker",
+      "url": "https://github.com/bytecauldron/awesome-gamemaker",
+      "repo": "bytecauldron/awesome-gamemaker",
+      "cate": "Gaming"
+    },
+    {
+      "name": "Game Production",
+      "url": "https://github.com/vhladiienko/awesome-game-production",
+      "repo": "vhladiienko/awesome-game-production",
+      "cate": "Gaming"
+    },
+    {
+      "name": "Babylon.js",
+      "url": "https://github.com/Symbitic/awesome-babylonjs",
+      "repo": "Symbitic/awesome-babylonjs",
+      "cate": "Gaming"
+    },
+    {
+      "name": "Roblox",
+      "url": "https://github.com/awesome-roblox/awesome-roblox",
+      "repo": "awesome-roblox/awesome-roblox",
       "cate": "Gaming"
     }
   ],
@@ -2119,6 +2317,12 @@
       "url": "https://github.com/sdras/awesome-actions",
       "repo": "sdras/awesome-actions",
       "cate": "Development Environment"
+    },
+    {
+      "name": "WezTerm",
+      "url": "https://github.com/michaelbrusegard/awesome-wezterm",
+      "repo": "michaelbrusegard/awesome-wezterm",
+      "cate": "Development Environment"
     }
   ],
   "Entertainment": [
@@ -2249,15 +2453,27 @@
       "url": "https://github.com/taosdata/awesome-tdengine",
       "repo": "taosdata/awesome-tdengine",
       "cate": "Databases"
+    },
+    {
+      "name": "Supabase",
+      "url": "https://github.com/lyqht/awesome-supabase",
+      "repo": "lyqht/awesome-supabase",
+      "cate": "Databases"
+    },
+    {
+      "name": "PocketBase",
+      "url": "https://github.com/benallfree/awesome-pocketbase",
+      "repo": "benallfree/awesome-pocketbase",
+      "cate": "Databases"
+    },
+    {
+      "name": "Neon",
+      "url": "https://github.com/tyaga001/awesome-neon",
+      "repo": "tyaga001/awesome-neon",
+      "cate": "Databases"
     }
   ],
   "Media": [
-    {
-      "name": "Creative Commons Media",
-      "url": "https://github.com/shime/creative-commons-media",
-      "repo": "shime/creative-commons-media",
-      "cate": "Media"
-    },
     {
       "name": "Fonts",
       "url": "https://github.com/brabadu/awesome-fonts",
@@ -2335,6 +2551,12 @@
       "url": "https://github.com/mfkl/awesome-vlc",
       "repo": "mfkl/awesome-vlc",
       "cate": "Media"
+    },
+    {
+      "name": "Audio Over IP",
+      "url": "https://github.com/Mo-way/awesome-aoip",
+      "repo": "Mo-way/awesome-aoip",
+      "cate": "Media"
     }
   ],
   "Learn": [
@@ -2381,6 +2603,12 @@
       "cate": "Learn"
     },
     {
+      "name": "STEAM",
+      "url": "https://github.com/RahulBirCodes/awesome-steam",
+      "repo": "RahulBirCodes/awesome-steam",
+      "cate": "Learn"
+    },
+    {
       "name": "Educational Games",
       "url": "https://github.com/yrgo/awesome-educational-games",
       "repo": "yrgo/awesome-educational-games",
@@ -2414,6 +2642,18 @@
       "name": "YouTubers",
       "url": "https://github.com/JoseDeFreitas/awesome-youtubers",
       "repo": "JoseDeFreitas/awesome-youtubers",
+      "cate": "Learn"
+    },
+    {
+      "name": "Hackathon",
+      "url": "https://github.com/dribdat/awesome-hackathon",
+      "repo": "dribdat/awesome-hackathon",
+      "cate": "Learn"
+    },
+    {
+      "name": "Certificates",
+      "url": "https://github.com/PanXProject/awesome-certificates",
+      "repo": "PanXProject/awesome-certificates",
       "cate": "Learn"
     }
   ],
@@ -2543,6 +2783,54 @@
       "url": "https://github.com/kareniel/awesome-evm-security",
       "repo": "kareniel/awesome-evm-security",
       "cate": "Security"
+    },
+    {
+      "name": "Password Cracking",
+      "url": "https://github.com/n0kovo/awesome-password-cracking",
+      "repo": "n0kovo/awesome-password-cracking",
+      "cate": "Security"
+    },
+    {
+      "name": "Security Card Games",
+      "url": "https://github.com/Karneades/awesome-security-card-games",
+      "repo": "Karneades/awesome-security-card-games",
+      "cate": "Security"
+    },
+    {
+      "name": "Suricata",
+      "url": "https://github.com/satta/awesome-suricata",
+      "repo": "satta/awesome-suricata",
+      "cate": "Security"
+    },
+    {
+      "name": "Prompt Injection",
+      "url": "https://github.com/FonduAI/awesome-prompt-injection",
+      "repo": "FonduAI/awesome-prompt-injection",
+      "cate": "Security"
+    },
+    {
+      "name": "Detection Engineering",
+      "url": "https://github.com/infosecB/awesome-detection-engineering",
+      "repo": "infosecB/awesome-detection-engineering",
+      "cate": "Security"
+    },
+    {
+      "name": "Annual Security Reports",
+      "url": "https://github.com/jacobdjwilson/awesome-annual-security-reports",
+      "repo": "jacobdjwilson/awesome-annual-security-reports",
+      "cate": "Security"
+    },
+    {
+      "name": "CI/CD Attacks",
+      "url": "https://github.com/TupleType/awesome-cicd-attacks",
+      "repo": "TupleType/awesome-cicd-attacks",
+      "cate": "Security"
+    },
+    {
+      "name": "OpenID Connect",
+      "url": "https://github.com/cerberauth/awesome-openid-connect",
+      "repo": "cerberauth/awesome-openid-connect",
+      "cate": "Security"
     }
   ],
   "Content Management Systems": [
@@ -2605,6 +2893,12 @@
       "url": "https://github.com/collective/awesome-plone",
       "repo": "collective/awesome-plone",
       "cate": "Content Management Systems"
+    },
+    {
+      "name": "Payload",
+      "url": "https://github.com/DanailMinchev/awesome-payload",
+      "repo": "DanailMinchev/awesome-payload",
+      "cate": "Content Management Systems"
     }
   ],
   "Hardware": [
@@ -2661,6 +2955,18 @@
       "url": "https://github.com/delftopenhardware/awesome-open-hardware",
       "repo": "delftopenhardware/awesome-open-hardware",
       "cate": "Hardware"
+    },
+    {
+      "name": "ADS-B",
+      "url": "https://github.com/rickstaa/awesome-adsb",
+      "repo": "rickstaa/awesome-adsb",
+      "cate": "Hardware"
+    },
+    {
+      "name": "Flying FPV",
+      "url": "https://github.com/Matthias84/awesome-flying-fpv",
+      "repo": "Matthias84/awesome-flying-fpv",
+      "cate": "Hardware"
     }
   ],
   "Business": [
@@ -2680,12 +2986,6 @@
       "name": "OKR Methodology",
       "url": "https://github.com/domenicosolazzo/awesome-okr",
       "repo": "domenicosolazzo/awesome-okr",
-      "cate": "Business"
-    },
-    {
-      "name": "Leading and Managing",
-      "url": "https://github.com/LappleApple/awesome-leading-and-managing",
-      "repo": "LappleApple/awesome-leading-and-managing",
       "cate": "Business"
     },
     {
@@ -2734,6 +3034,12 @@
       "name": "Billing",
       "url": "https://github.com/kdeldycke/awesome-billing",
       "repo": "kdeldycke/awesome-billing",
+      "cate": "Business"
+    },
+    {
+      "name": "Engineering Strategy",
+      "url": "https://github.com/aleixmorgadas/awesome-engineering-strategy",
+      "repo": "aleixmorgadas/awesome-engineering-strategy",
       "cate": "Business"
     }
   ],
@@ -2801,12 +3107,6 @@
       "cate": "Networking"
     },
     {
-      "name": "Network Analysis",
-      "url": "https://github.com/briatte/awesome-network-analysis",
-      "repo": "briatte/awesome-network-analysis",
-      "cate": "Networking"
-    },
-    {
       "name": "PCAPTools",
       "url": "https://github.com/caesar0301/awesome-pcaptools",
       "repo": "caesar0301/awesome-pcaptools",
@@ -2822,6 +3122,18 @@
       "name": "SNMP",
       "url": "https://github.com/eozer/awesome-snmp",
       "repo": "eozer/awesome-snmp",
+      "cate": "Networking"
+    },
+    {
+      "name": "Scapy",
+      "url": "https://github.com/secdev/awesome-scapy",
+      "repo": "secdev/awesome-scapy",
+      "cate": "Networking"
+    },
+    {
+      "name": "Cilium",
+      "url": "https://github.com/seifrajhi/awesome-cilium",
+      "repo": "seifrajhi/awesome-cilium",
       "cate": "Networking"
     }
   ],
@@ -2846,8 +3158,8 @@
     },
     {
       "name": "Mastodon",
-      "url": "https://github.com/tleb/awesome-mastodon",
-      "repo": "tleb/awesome-mastodon",
+      "url": "https://github.com/hyperupcall/awesome-mastodon",
+      "repo": "hyperupcall/awesome-mastodon",
       "cate": "Decentralized Systems"
     },
     {
@@ -2903,26 +3215,110 @@
       "url": "https://github.com/aorumbayev/awesome-algorand",
       "repo": "aorumbayev/awesome-algorand",
       "cate": "Decentralized Systems"
+    },
+    {
+      "name": "ZeroNet",
+      "url": "https://github.com/zolagonano/awesome-zeronet",
+      "repo": "zolagonano/awesome-zeronet",
+      "cate": "Decentralized Systems"
+    },
+    {
+      "name": "Cosmos SDK",
+      "url": "https://github.com/cosmos/awesome-cosmos",
+      "repo": "cosmos/awesome-cosmos",
+      "cate": "Decentralized Systems"
+    },
+    {
+      "name": "Tor",
+      "url": "https://github.com/polycarbohydrate/awesome-tor",
+      "repo": "polycarbohydrate/awesome-tor",
+      "cate": "Decentralized Systems"
+    },
+    {
+      "name": "ATProto",
+      "url": "https://github.com/atblueprints/awesome-atproto",
+      "repo": "atblueprints/awesome-atproto",
+      "cate": "Decentralized Systems"
     }
   ],
-  "Higher Education": [
+  "Health and Social Science": [
+    {
+      "name": "Biomedical Information Extraction",
+      "url": "https://github.com/caufieldjh/awesome-bioie",
+      "repo": "caufieldjh/awesome-bioie",
+      "cate": "Health and Social Science"
+    },
     {
       "name": "Computational Neuroscience",
       "url": "https://github.com/eselkin/awesome-computational-neuroscience",
       "repo": "eselkin/awesome-computational-neuroscience",
-      "cate": "Higher Education"
+      "cate": "Health and Social Science"
+    },
+    {
+      "name": "Diversity",
+      "url": "https://github.com/folkswhocode/awesome-diversity",
+      "repo": "folkswhocode/awesome-diversity",
+      "cate": "Health and Social Science"
     },
     {
       "name": "Digital History",
       "url": "https://github.com/maehr/awesome-digital-history",
       "repo": "maehr/awesome-digital-history",
-      "cate": "Higher Education"
+      "cate": "Health and Social Science"
     },
     {
-      "name": "Scientific Writing",
-      "url": "https://github.com/writing-resources/awesome-scientific-writing",
-      "repo": "writing-resources/awesome-scientific-writing",
-      "cate": "Higher Education"
+      "name": "Empathy in Engineering",
+      "url": "https://github.com/KimberlyMunoz/empathy-in-engineering",
+      "repo": "KimberlyMunoz/empathy-in-engineering",
+      "cate": "Health and Social Science"
+    },
+    {
+      "name": "Healthcare",
+      "url": "https://github.com/kakoni/awesome-healthcare",
+      "repo": "kakoni/awesome-healthcare",
+      "cate": "Health and Social Science"
+    },
+    {
+      "name": "Humane Technology",
+      "url": "https://github.com/humanetech-community/awesome-humane-tech",
+      "repo": "humanetech-community/awesome-humane-tech",
+      "cate": "Health and Social Science"
+    },
+    {
+      "name": "Mental Health",
+      "url": "https://github.com/dreamingechoes/awesome-mental-health",
+      "repo": "dreamingechoes/awesome-mental-health",
+      "cate": "Health and Social Science"
+    },
+    {
+      "name": "Neuroscience",
+      "url": "https://github.com/analyticalmonk/awesome-neuroscience",
+      "repo": "analyticalmonk/awesome-neuroscience",
+      "cate": "Health and Social Science"
+    },
+    {
+      "name": "Digital Humanities",
+      "url": "https://github.com/dh-tech/awesome-digital-humanities",
+      "repo": "dh-tech/awesome-digital-humanities",
+      "cate": "Health and Social Science"
+    },
+    {
+      "name": "Lucid Dreams",
+      "url": "https://github.com/IAmCoder/awesome-lucid-dreams",
+      "repo": "IAmCoder/awesome-lucid-dreams",
+      "cate": "Health and Social Science"
+    },
+    {
+      "name": "Neuroimaging",
+      "url": "https://github.com/NPACore/awesome-neuroimaging",
+      "repo": "NPACore/awesome-neuroimaging",
+      "cate": "Health and Social Science"
+    },
+    {
+      "name": "Transgender",
+      "url": "https://github.com/cvyl/awesome-transgender",
+      "repo": "cvyl/awesome-transgender",
+      "cate": "Health and Social Science"
     }
   ],
   "Events": [
@@ -3005,9 +3401,21 @@
       "url": "https://github.com/aliesbelik/awesome-gatling",
       "repo": "aliesbelik/awesome-gatling",
       "cate": "Testing"
+    },
+    {
+      "name": "CodeRabbit",
+      "url": "https://github.com/coderabbitai/awesome-coderabbit",
+      "repo": "coderabbitai/awesome-coderabbit",
+      "cate": "Testing"
     }
   ],
   "Miscellaneous": [
+    {
+      "name": "Scientific Writing",
+      "url": "https://github.com/writing-resources/awesome-scientific-writing",
+      "repo": "writing-resources/awesome-scientific-writing",
+      "cate": "Miscellaneous"
+    },
     {
       "name": "JSON",
       "url": "https://github.com/burningtree/awesome-json",
@@ -3102,6 +3510,12 @@
       "name": "Readme",
       "url": "https://github.com/matiassingers/awesome-readme",
       "repo": "matiassingers/awesome-readme",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "GitHub Wiki",
+      "url": "https://github.com/MyHoneyBadger/awesome-github-wiki",
+      "repo": "MyHoneyBadger/awesome-github-wiki",
       "cate": "Miscellaneous"
     },
     {
@@ -3309,12 +3723,6 @@
       "cate": "Miscellaneous"
     },
     {
-      "name": "Empathy in Engineering",
-      "url": "https://github.com/KimberlyMunoz/empathy-in-engineering",
-      "repo": "KimberlyMunoz/empathy-in-engineering",
-      "cate": "Miscellaneous"
-    },
-    {
       "name": "DTrace",
       "url": "https://github.com/xen0l/awesome-dtrace",
       "repo": "xen0l/awesome-dtrace",
@@ -3405,12 +3813,6 @@
       "cate": "Miscellaneous"
     },
     {
-      "name": "Healthcare",
-      "url": "https://github.com/kakoni/awesome-healthcare",
-      "repo": "kakoni/awesome-healthcare",
-      "cate": "Miscellaneous"
-    },
-    {
       "name": "Magento 2",
       "url": "https://github.com/DavidLambauer/awesome-magento2",
       "repo": "DavidLambauer/awesome-magento2",
@@ -3423,21 +3825,9 @@
       "cate": "Miscellaneous"
     },
     {
-      "name": "Neuroscience",
-      "url": "https://github.com/analyticalmonk/awesome-neuroscience",
-      "repo": "analyticalmonk/awesome-neuroscience",
-      "cate": "Miscellaneous"
-    },
-    {
       "name": "Ad-Free",
       "url": "https://github.com/johnjago/awesome-ad-free",
       "repo": "johnjago/awesome-ad-free",
-      "cate": "Miscellaneous"
-    },
-    {
-      "name": "Esolangs",
-      "url": "https://github.com/angrykoala/awesome-esolangs",
-      "repo": "angrykoala/awesome-esolangs",
       "cate": "Miscellaneous"
     },
     {
@@ -3474,12 +3864,6 @@
       "name": "Crypto Currency Tools & Algorithms",
       "url": "https://github.com/Zheaoli/awesome-coins",
       "repo": "Zheaoli/awesome-coins",
-      "cate": "Miscellaneous"
-    },
-    {
-      "name": "Diversity",
-      "url": "https://github.com/folkswhocode/awesome-diversity",
-      "repo": "folkswhocode/awesome-diversity",
       "cate": "Miscellaneous"
     },
     {
@@ -3537,12 +3921,6 @@
       "cate": "Miscellaneous"
     },
     {
-      "name": "Humane Technology",
-      "url": "https://github.com/humanetech-community/awesome-humane-tech",
-      "repo": "humanetech-community/awesome-humane-tech",
-      "cate": "Miscellaneous"
-    },
-    {
       "name": "Speakers",
       "url": "https://github.com/karlhorky/awesome-speakers",
       "repo": "karlhorky/awesome-speakers",
@@ -3570,12 +3948,6 @@
       "name": "Food",
       "url": "https://github.com/jzarca01/awesome-food",
       "repo": "jzarca01/awesome-food",
-      "cate": "Miscellaneous"
-    },
-    {
-      "name": "Mental Health",
-      "url": "https://github.com/dreamingechoes/awesome-mental-health",
-      "repo": "dreamingechoes/awesome-mental-health",
       "cate": "Miscellaneous"
     },
     {
@@ -3663,12 +4035,6 @@
       "cate": "Miscellaneous"
     },
     {
-      "name": "Biomedical Information Extraction",
-      "url": "https://github.com/caufieldjh/awesome-bioie",
-      "repo": "caufieldjh/awesome-bioie",
-      "cate": "Miscellaneous"
-    },
-    {
       "name": "Web Archiving",
       "url": "https://github.com/iipc/awesome-web-archiving",
       "repo": "iipc/awesome-web-archiving",
@@ -3729,6 +4095,12 @@
       "cate": "Miscellaneous"
     },
     {
+      "name": "Computational Geometry",
+      "url": "https://github.com/atkirtland/awesome-computational-geometry",
+      "repo": "atkirtland/awesome-computational-geometry",
+      "cate": "Miscellaneous"
+    },
+    {
       "name": "OpenStreetMap",
       "url": "https://github.com/osmlab/awesome-openstreetmap",
       "repo": "osmlab/awesome-openstreetmap",
@@ -3739,6 +4111,120 @@
       "url": "https://github.com/inoue0426/awesome-computational-biology",
       "repo": "inoue0426/awesome-computational-biology",
       "cate": "Miscellaneous"
+    },
+    {
+      "name": "Read the Docs",
+      "url": "https://github.com/readthedocs-examples/awesome-read-the-docs",
+      "repo": "readthedocs-examples/awesome-read-the-docs",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Quarto",
+      "url": "https://github.com/mcanouil/awesome-quarto",
+      "repo": "mcanouil/awesome-quarto",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Biological Image Analysis",
+      "url": "https://github.com/hallvaaw/awesome-biological-image-analysis",
+      "repo": "hallvaaw/awesome-biological-image-analysis",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://github.com/sindresorhus/awesome-chatgpt",
+      "repo": "sindresorhus/awesome-chatgpt",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Whisper",
+      "url": "https://github.com/sindresorhus/awesome-whisper",
+      "repo": "sindresorhus/awesome-whisper",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Stock Trading",
+      "url": "https://github.com/shi-rudo/awesome-stock-trading",
+      "repo": "shi-rudo/awesome-stock-trading",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Steam Deck",
+      "url": "https://github.com/airscripts/awesome-steam-deck",
+      "repo": "airscripts/awesome-steam-deck",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Astrophotography",
+      "url": "https://github.com/lunohodov/awesome-astrophotography",
+      "repo": "lunohodov/awesome-astrophotography",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "HPC",
+      "url": "https://github.com/dstdev/awesome-hpc",
+      "repo": "dstdev/awesome-hpc",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Geocaching",
+      "url": "https://github.com/FoxFil/awesome-geocaching",
+      "repo": "FoxFil/awesome-geocaching",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Regex",
+      "url": "https://github.com/slevithan/awesome-regex",
+      "repo": "slevithan/awesome-regex",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Event-Driven Architecture",
+      "url": "https://github.com/lutzh/awesome-event-driven-architecture",
+      "repo": "lutzh/awesome-event-driven-architecture",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Permacomputing",
+      "url": "https://github.com/idematos/awesome-permacomputing",
+      "repo": "idematos/awesome-permacomputing",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Standards",
+      "url": "https://github.com/donBarbos/awesome-standards",
+      "repo": "donBarbos/awesome-standards",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Claude Code",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "repo": "hesreallyhim/awesome-claude-code",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Gemini CLI",
+      "url": "https://github.com/Piebald-AI/awesome-gemini-cli",
+      "repo": "Piebald-AI/awesome-gemini-cli",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "SAP Commerce",
+      "url": "https://github.com/eminyagiz42/awesome-sap-commerce",
+      "repo": "eminyagiz42/awesome-sap-commerce",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Tech Ethics",
+      "url": "https://github.com/sampart/awesome-tech-ethics",
+      "repo": "sampart/awesome-tech-ethics",
+      "cate": "Miscellaneous"
+    },
+    {
+      "name": "Copilot Agents",
+      "url": "https://github.com/Code-and-Sorts/awesome-copilot-agents",
+      "repo": "Code-and-Sorts/awesome-copilot-agents",
+      "cate": "Miscellaneous"
     }
   ],
   "Related": [
@@ -3746,12 +4232,6 @@
       "name": "All Awesome Lists",
       "url": "https://github.com/topics/awesome",
       "repo": "topics/awesome",
-      "cate": "Related"
-    },
-    {
-      "name": "Awesome Indexed",
-      "url": "https://awesome-indexed.mathew-davies.co.uk",
-      "repo": "undefined/undefined",
       "cate": "Related"
     },
     {
@@ -3770,12 +4250,6 @@
       "name": "Awesome CLI",
       "url": "https://github.com/umutphp/awesome-cli",
       "repo": "umutphp/awesome-cli",
-      "cate": "Related"
-    },
-    {
-      "name": "Awesome Viewer",
-      "url": "https://awesome.digitalbunker.dev",
-      "repo": "undefined/undefined",
       "cate": "Related"
     },
     {
